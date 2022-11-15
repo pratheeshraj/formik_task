@@ -1,0 +1,122 @@
+*{
+ margin: 0;
+  padding: 0;
+  
+  box-sizing: border-box;
+}
+
+.countainer{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
+  background-color:rgb(228, 175, 175);
+}
+table{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50% ,-50%);
+  width: 60%;
+ text-align: center;
+ border-collapse: collapse;
+ border-spacing: 0;
+ border-radius: 12px 12px 0 0;
+ overflow: hidden;
+ background-color: #fafafa;
+ box-shadow: 0px 1px 12px rgba(32,32,32,32);
+
+}
+th{
+  background-color: aquamarine;
+  text-transform: uppercase;
+}
+th ,td{
+  padding: 10px 10px;
+  font-style: italic;
+}
+tr:nth-last-child(odd){
+  background-color: beige;
+}
+tr:nth-last-child(even){
+  background-color: rgb(205, 205, 130);
+}
+tr:nth-last-child(odd):hover{
+  background-color: #fafafa;
+color: blue;
+}
+tr:nth-last-child(even):hover{
+  background-color:#fafafa;
+  color: blue;
+}
+
+.button{
+  
+  padding-top: 10px;
+  text-align: end;
+  margin-right: 20%;
+  height: 100px;;
+  
+ 
+}
+a.Link{
+  
+  text-decoration: none;
+  position: relative;
+  height: 50px;
+  width: 200px;
+  background-color: aquamarine;
+font-size: 15px;
+border: none;
+font-size: medium;
+
+border-radius: 50px;
+cursor: pointer;
+text-transform: uppercase;
+font-weight: 500;
+}
+.button .Link:hover{
+  background: linear-gradient( 90deg, aquamarine, rgb(186, 186, 66) , aquamarine);
+  background-size: 400%;
+  
+}
+.button .Link:before{
+ content: "";
+  position: absolute;
+  background-color: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);opacity: 0;
+  transition: opacity 0.5s;
+
+}
+.button .Link:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+.button .Link:hover{
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+@keyframes glow{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position:400% ;
+  }
+}
+.input{
+  border: 2px solid red;
+  outline: none;
+}
+.input1{
+  border: 2px solid green;
+  outline: none;
+}
